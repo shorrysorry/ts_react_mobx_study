@@ -1,9 +1,22 @@
 // number , string , boolean , null , undefined
+// object , array
 // tuple , void , never , enum
 
 // 타입 추론
 // 타입을 명시해주지 않아도, 값을 할당하면 타입이 자동적으로 지정된다.
 let car = 'bmw';
+
+//object
+const shorry = {
+  name: 'shorry',
+  nation: 'Korea',
+  location: 'busan',
+  hobbies: ['board games', 'taking a walk'],
+};
+
+for (const hobby of shorry.hobbies) {
+  console.log(hobby.toUpperCase());
+}
 
 // arr
 let array = [1, 2, 3];
