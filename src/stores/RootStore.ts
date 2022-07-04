@@ -3,12 +3,7 @@ import CounterDoubleStore from "./CounterDoubleStore";
 import CounterStore from "./CounterStore";
 
 export interface RootStoreProps {
-  rootStore?: StoreProps;
-}
-
-interface StoreProps {
-  counterStore: CounterStore;
-  counterDoubleStore: CounterDoubleStore;
+  rootStore?: RootStore;
 }
 
 export default class RootStore {
