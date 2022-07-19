@@ -1,5 +1,5 @@
 import { inject, observer } from "mobx-react";
-import { RootStoreProps } from "./stores/RootStore";
+import { RootStoreProps } from "../stores/RootStore";
 
 const Counter = ({ rootStore }: RootStoreProps) => {
   const { counterStore, counterDoubleStore } = rootStore!;

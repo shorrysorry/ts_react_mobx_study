@@ -1,10 +1,21 @@
-import Counter from "./Counter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
+import GlobalStyle from "./styles/globalStyles";
+
+import Counter from "./components/Counter";
 
 function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Counter />} />
+        </Routes>
+      </BrowserRouter>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 
