@@ -1,18 +1,18 @@
-import { makeAutoObservable } from "mobx";
-import CounterDoubleStore from "./CounterDoubleStore";
-import CounterStore from "./CounterStore";
+import { makeAutoObservable } from 'mobx'
+import CounterDoubleStore from './CounterDoubleStore'
+import CounterStore from './CounterStore'
 
 export interface RootStoreProps {
-  rootStore?: RootStore;
+  rootStore?: RootStore
 }
 
 export default class RootStore {
-  counterStore: CounterStore;
-  counterDoubleStore: CounterDoubleStore;
+  counterStore: CounterStore
+  counterDoubleStore: CounterDoubleStore
 
   constructor() {
-    makeAutoObservable(this);
-    this.counterStore = new CounterStore(this);
-    this.counterDoubleStore = new CounterDoubleStore(this);
+    makeAutoObservable(this)
+    this.counterStore = new CounterStore(this)
+    this.counterDoubleStore = new CounterDoubleStore(this)
   }
 }

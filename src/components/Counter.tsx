@@ -1,8 +1,8 @@
-import { inject, observer } from "mobx-react";
-import { RootStoreProps } from "../stores/RootStore";
+import { inject, observer } from 'mobx-react'
+import { RootStoreProps } from '../stores/RootStore'
 
 const Counter = ({ rootStore }: RootStoreProps) => {
-  const { counterStore, counterDoubleStore } = rootStore!;
+  const { counterStore, counterDoubleStore } = rootStore!
 
   return (
     <div>
@@ -17,11 +17,9 @@ const Counter = ({ rootStore }: RootStoreProps) => {
       <button onClick={() => counterDoubleStore.decrease()}> -2</button>
 
       <div>first store number and second store button</div>
-      <button onClick={() => counterDoubleStore.increaseCounterStoreThree()}>
-        new +3
-      </button>
+      <button onClick={() => counterDoubleStore.increaseCounterStoreThree()}>new +3</button>
     </div>
-  );
-};
+  )
+}
 
-export default inject("rootStore")(observer(Counter));
+export default inject('rootStore')(observer(Counter))

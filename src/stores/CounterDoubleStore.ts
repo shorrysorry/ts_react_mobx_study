@@ -1,26 +1,26 @@
-import { makeAutoObservable } from "mobx";
-import CounterStore from "./CounterStore";
-import RootStore from "./RootStore";
+import { makeAutoObservable } from 'mobx'
+import CounterStore from './CounterStore'
+import RootStore from './RootStore'
 
 class CounterDoubleStore {
-  counterStore: CounterStore;
+  counterStore: CounterStore
   constructor(rootStore: RootStore) {
-    this.counterStore = rootStore.counterStore;
-    makeAutoObservable(this);
+    this.counterStore = rootStore.counterStore
+    makeAutoObservable(this)
   }
-  number: number = 0;
+  number = 0
 
   increase() {
-    this.number += 2;
+    this.number += 2
   }
 
   decrease() {
-    this.number -= 2;
+    this.number -= 2
   }
 
   increaseCounterStoreThree() {
-    this.counterStore.number += 3;
+    this.counterStore.number += 3
   }
 }
 
-export default CounterDoubleStore;
+export default CounterDoubleStore
