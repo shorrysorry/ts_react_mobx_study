@@ -1,7 +1,11 @@
 import { inject, observer } from 'mobx-react'
-import { RootStoreProps } from '../stores/RootStore'
+import { RootStoreProps } from '../../stores/RootStore'
 
 const Counter = ({ rootStore }: RootStoreProps) => {
+  // MobX 가 제대로 작동은 하나 rootStore! 의 방식이 잘못된것으로 보임.
+  // 추가적인 방법을 공부해 볼 필요가 있음.
+
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const { counterStore, counterDoubleStore } = rootStore!
 
   return (

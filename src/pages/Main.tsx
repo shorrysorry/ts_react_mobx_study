@@ -1,9 +1,7 @@
 import React from 'react'
-import Counter from '../components/Counter'
+import Counter from '../components/atoms/Counter'
 
 function Main() {
-  const a = 1
-
   return (
     <div>
       <Counter />
